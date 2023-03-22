@@ -5,31 +5,60 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  margin: 2rem 9rem;
+
+body{
+  font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+  
+}
+#App {
+  padding: 2rem 9rem;
   color: white;
   background: linear-gradient(to bottom, #11111d 0%, #07071c 100%);
-  font-family: "Quicksand", sans-serif;
 }
+
+#App.dark{
+  background: linear-gradient(to bottom, #ffffff 0%, #d3cffa 100%);
+  color: #3a0f72;
+}
+
 hr {
   border: 1px solid #9797ff;
   box-shadow: 0px 3px 19px #2b40ff;
 }
 
+
+
 /*home*/
 #home {
   margin-bottom: 15rem;
 }
-
+#homeIcon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+#homeIcon:hover{
+  color: #0cbf6f;
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: left;
-  padding-bottom: 8rem;
+  gap: 2.5rem;
+  position: fixed;
+  z-index: 100;
+  /* background-color: #07071c; */
+  top: 0;
+  padding-top: 2rem;
+  width: 100%;
 }
 nav a {
-  margin: 32px;
   font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+.dark nav a{
+  color:#3a0f72;
 }
 nav img {
   margin-right: 32px;
@@ -41,16 +70,27 @@ nav a:hover {
 
 h1 {
   background-clip: text;
-  text-fill-color: transparent;
-  background: linear-gradient(90deg, #0c80d3 0%, #0cd350 30%);
+  background: linear-gradient(to right, #0c80d3 0%, #0cd350 30%, #520cd3 60%, #0c80d3 100% );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: normal;
   font-weight: 700;
   font-size: 56px;
   line-height: 80px;
+  background-size: 200%;
+  animation: background-pan 3s linear infinite;
+  white-space: nowrap;
 }
 
+@keyframes background-pan {
+  from{
+    background-position: 0% center;
+  }
+  to{
+    background-position: -200% center;
+  }
+  
+}
 span.green {
   color: #0cbf6f;
 }
@@ -59,6 +99,10 @@ h3 {
   font-size: 36px;
   margin-bottom: 1rem;
 }
+#hero{
+       padding-top: 12rem; 
+}
+
 #hero h2 {
   margin: 20px;
   font-weight: 400;
@@ -79,8 +123,8 @@ h3 {
 
 #ctaBtn {
   position: absolute;
-  left: 985px;
-  top: 280px;
+  left: 800px;
+  top: 350px;
   width: 200px;
   height: 42px;
   border: 10px solid;
@@ -96,6 +140,21 @@ h3 {
   filter: drop-shadow(0px 2.39189px 4.59459px rgba(213, 219, 255, 0.486));
 }
 
+.dark #ctaBtn.btn{
+  color: #3a0f72;
+  filter: drop-shadow(0px 2.39189px 4.59459px rgba(54, 84, 253, 0.61));
+}
+.dark #ctaBtn.btn:hover{
+  color: white;
+  filter: 
+  /* drop-shadow(0px 23.1838px 15.4559px rgba(55, 154, 214, 0.165)) */ drop-shadow(
+      0px 15.0259px 10.0172px rgba(69, 69, 255, 0.188)
+    )
+    drop-shadow(0px 9.45861px 6.30574px rgba(97, 123, 253, 0.215))
+    drop-shadow(0px 5.43456px 3.62304px rgba(114, 130, 252, 0.251))
+    drop-shadow(0px 2.39189px 1.59459px rgba(141, 158, 252, 0.33));
+}
+
 #ctaBtn:hover {
   background: linear-gradient(45deg, #41afff, #a55fff, #6687fe);
   filter: 
@@ -106,9 +165,10 @@ h3 {
     drop-shadow(0px 5.43456px 3.62304px rgba(213, 219, 255, 0.25091))
     drop-shadow(0px 2.39189px 1.59459px rgba(213, 219, 255, 0.33));
   cursor: pointer;
+  transition: all 1s ease-out;
 }
 
-/*sqares*/
+/*squares*/
 
 #squareElem {
   position: absolute;
@@ -164,24 +224,24 @@ h3 {
 }
 .squares.corner {
   position: absolute;
-  width: 246px;
-  height: 248px;
+  width: 186px;
+  height: 188px;
 }
 .squares.corner.one {
-  left: 1028px;
-  top: -19px;
+  left: 1008px;
+  top: 1px;
 }
 .squares.corner.two {
-  left: 1075px;
-  top: -69px;
+  left: 1055px;
+  top: -49px;
 }
 .squares.corner.three {
-  left: 1134px;
-  top: -124px;
+  left: 1114px;
+  top: -104px;
 }
 .squares.corner.four {
-  left: 1184px;
-  top: -174px;
+  left: 1164px;
+  top: -154px;
 }
 
 /*-----SKILLS-----*/
@@ -227,8 +287,13 @@ h3 {
     0px 2.9607px 3.53517px rgba(0, 0, 0, 0.0363503),
     0px 1.23202px 1.47106px rgba(0, 0, 0, 0.0253031);
 }
+#imgSkills img:hover{
+    scale: 1.01;
+    transition: 1s ease-in-out;
+}
 
 /*------Projects----------*/
+
 #projects {
   margin-bottom: 10rem;
   background: linear-gradient(
@@ -252,12 +317,17 @@ h3 {
 }
 #works {
   display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .work_name {
   font-size: 24px;
 }
+
+
 /*--About-----*/
+
 #about h4 {
   font-weight: 500;
   font-size: 36px;
@@ -279,7 +349,10 @@ h3 {
 #contact hr {
   width: 280px;
 }
+
+
 /*---Contact*/
+
 #contact h4 {
   font-weight: 500;
   font-size: 36px;
@@ -298,6 +371,9 @@ h3 {
   margin-right: 50px;
   cursor: pointer;
 }
+.dark #contact_links a{
+  color:#3a0f72;
+} 
 #contact_links a:hover {
   color: #a55fff;
 }
@@ -312,4 +388,111 @@ h3 {
   text-align: center;
   font-size: 24px;
   margin: 50px 0 100px;
+}
+
+
+/*--nav toggler---*/
+
+.toggler {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.toggler_slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+.dark .toggler_slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+.toggler_slider_circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.dark .toggler_slider_circle {
+  background-color: rgb(68, 52, 114);
+}
+.toggler_light {
+  color: #6b6681;
+}
+
+.dark .toggler_light {
+  color: #918E9B;
+}
+
+.toggler_dark {
+  color: #D5D4D8;
+}
+
+
+.dark .toggler_slider {
+  justify-content: flex-end;
+}
+
+
+/*...Loading*/
+
+#loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/*...Magic Stars...*/
+
+.magic{
+  display: inline-block;
+  position: relative;
+}
+.magic-star{
+  display: block;
+  position: absolute;
+  --size:clamp(20px, 1.5vw, 30px);
+  height:var(--size);
+  width: var(--size);
+  left:var(--star-left) ;
+  top: var(--star-top);
+
+  animation: scale 700ms ease forwards ;
+}
+.magic-star svg{
+  display: block;
+  opacity: 0.7;
+  animation: rotate 1000ms linear infinite;
+}
+.magic-star svg path{
+  fill: #6d30bd;
+}
+
+@keyframes scale {
+  from, to{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
 }

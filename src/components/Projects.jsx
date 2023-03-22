@@ -1,6 +1,6 @@
-function Projects(){
+function Projects(props){
     return(
-        <div id="projects">
+        <div id="projects" className={props.darkMode ? "dark" : ""}>
             <h4>Projects / works</h4>
             <hr></hr>
             <div id="works">
@@ -12,6 +12,14 @@ function Projects(){
                 <div className="work">
                     <img src="/img/imgGal.png" />
                     <p className="work_name">Image Gallery</p>
+                </div>
+                <div className="work">
+                    <img src="/img/imgGal.png" />
+                    <p className="work_name">Art gallery</p>
+                </div>
+                <div className="work">
+                    <img src="/img/imgGal.png" />
+                    <p className="work_name">Artist landing page</p>
                 </div>
             </div>
             

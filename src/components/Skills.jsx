@@ -1,8 +1,8 @@
 
 
-function Skills(){
+function Skills(props){
     return(
-        <div id="skills">
+        <div id="skills" className={props.darkMode ? "dark" : ""}>
             <p>Skills</p>
             <hr></hr>
             <div id="imgSkills">
