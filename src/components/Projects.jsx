@@ -1,3 +1,6 @@
+import weather from'../assets/img/weather.png'
+import imgGal from'../assets/img/imgGal.png'
+
 function Projects(props){
     return(
         <div id="projects" className={props.darkMode ? "dark" : ""}>
@@ -6,19 +9,19 @@ function Projects(props){
             <div id="works">
 
                 <div className="work">
-                    <img src="/img/weather.png"/>
+                    <img src={weather}/>
                     <p className="work_name">Weather App usig weather API</p>
                 </div>
                 <div className="work">
-                    <img src="/img/imgGal.png" />
+                    <img src={imgGal} />
                     <p className="work_name">Image Gallery</p>
                 </div>
                 <div className="work">
-                    <img src="/img/imgGal.png" />
+                    <img src={imgGal} />
                     <p className="work_name">Art gallery</p>
                 </div>
                 <div className="work">
-                    <img src="/img/imgGal.png" />
+                    <img src={imgGal} />
                     <p className="work_name">Artist landing page</p>
                 </div>
             </div>

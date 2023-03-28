@@ -1,3 +1,6 @@
+import mail from'../assets/img/mail.png'
+import linked from'../assets/img/linkedin.png'
+
 function Contact(props){
     return(
         <div>
@@ -17,10 +20,10 @@ function Contact(props){
 
                     <a href="https://www.linkedin.com/in/%C3%A1gnes-kov%C3%A1cs-a1331a25a/">
                         LinkedIn
-                        <img id="linked" src="img/linkedin.png"/>
+                        <img id="linked" src={linked}/>
                     </a>
                     <a> Email
-                        <img id="mail" src="img/mail.png"/>
+                        <img id="mail" src={mail}/>
                     </a>
                 </div>
             </div>

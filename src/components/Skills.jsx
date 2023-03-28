@@ -1,4 +1,9 @@
-
+import figma from '../assets/img/figma.png'
+import ps from '../assets/img/ps.png'
+import html from '../assets/img/html.png'
+import css from '../assets/img/css.png'
+import js from '../assets/img/js.png'
+import React from '../assets/img/React.png'
 
 function Skills(props){
     return(
@@ -6,12 +11,12 @@ function Skills(props){
             <p>Skills</p>
             <hr></hr>
             <div id="imgSkills">
-                <img src="/img/figma.png"/>
-                <img src="/img/ps.png"/>
-                <img src="/img/html.png"/>
-                <img src="/img/css.png"/>
-                <img src="/img/js.png"/>
-                <img src="/img/React.png"/>
+                <img src={figma}/>
+                <img src={ps}/>
+                <img src={html}/>
+                <img src={css}/>
+                <img src={js}/>
+                <img src={React}/>
 
             </div>
         </div>

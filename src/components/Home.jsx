@@ -38,6 +38,7 @@ for(const star of document.getElementsByClassName("magic-star")) {
            
             <nav>
                 <AnchorLink href='#home'><IoHomeOutline id='homeIcon'/></AnchorLink>
+                <AnchorLink href='#works'><a>Works</a></AnchorLink>
                 <AnchorLink href='#about'><a>About me</a></AnchorLink>
                 <AnchorLink href='#contact'><a>Contact</a></AnchorLink>
               
