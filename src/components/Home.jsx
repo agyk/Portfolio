@@ -1,4 +1,3 @@
-import {IoHomeOutline} from 'react-icons/io5'
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Home(props){
@@ -25,6 +24,8 @@ for(const star of document.getElementsByClassName("magic-star")) {
   }, index++ * (interval / 3))
 }
 
+
+
     return(
         <div id="home" className={props.darkMode ? "dark" : ""}>
             <div id="squareElem"></div>
@@ -36,20 +37,7 @@ for(const star of document.getElementsByClassName("magic-star")) {
                  <div className="squares corner three"></div>
                  {/* <div className="squares corner four"></div> */}
            
-            <nav>
-                <AnchorLink href='#home'><IoHomeOutline id='homeIcon'/></AnchorLink>
-                <AnchorLink href='#works'><a>Works</a></AnchorLink>
-                <AnchorLink href='#about'><a>About me</a></AnchorLink>
-                <AnchorLink href='#contact'><a>Contact</a></AnchorLink>
-              
-                <div className="toggler">
-                    <p className="toggler_light">Light</p>
-                    <div className="toggler_slider" onClick={props.toggleDarkMode}>
-                        <div className="toggler_slider_circle"></div>
-                    </div>
-                    <p className="toggler_dark">Dark</p>
-                </div>
-            </nav>
+            
             <div id="hero">
                 <div className="magic">
                     <span className='magic-star'>

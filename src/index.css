@@ -49,7 +49,8 @@ nav {
   z-index: 100;
   /* background-color: #07071c; */
   top: 0;
-  padding-top: 2rem;
+  left:0;
+  padding: 1.25rem 9rem;
   width: 100%;
 }
 nav a {
@@ -67,6 +68,26 @@ nav a:hover {
   color: #0cbf6f;
   cursor: pointer;
 }
+.nav_bg{
+  background-color: #07071c;
+}
+.dark .nav_bg{
+  background-color: #51a8e6;
+}
+.dark .nav_bg a{
+  color:white;
+}
+.dark .nav_bg a:hover{
+  color:#86ffc8;
+}
+.dark .nav_bg #homeIcon:hover{
+  color:#86ffc8;
+}
+.dark .nav_bg .toggler_light{
+  color:#d0e9ff;
+}
+
+
 
 h1 {
   background-clip: text;

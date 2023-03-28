@@ -2,6 +2,7 @@ import Contact from './components/Contact'
 import Home from './components/Home'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Nav from './components/Nav'
 import { useState,useEffect } from 'react'
 import Loader from './components/Loader'
 
@@ -21,7 +22,8 @@ function App() {
     
     <div id="App" className={darkMode ? "dark" : ""} >
       {!loaded ? <Loader/> : <>
-      <Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+      <Nav toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
+      <Home  darkMode={darkMode} />
       <Skills darkMode={darkMode}/>
       <Projects darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>
