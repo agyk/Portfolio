@@ -1,5 +1,7 @@
 import weather from'../assets/img/weather.png'
-import imgGal from'../assets/img/imgGal.png'
+import imgGal from'../assets/img/photoGal.png'
+import aniart from'../assets/img/aniart.png'
+import warhol from'../assets/img/warhol.png'
 
 function Projects(props){
     return(
@@ -17,11 +19,11 @@ function Projects(props){
                     <p className="work_name">Image Gallery</p>
                 </div>
                 <div className="work">
-                    <img src={imgGal} />
+                    <img src={warhol} />
                     <p className="work_name">Art gallery</p>
                 </div>
                 <div className="work">
-                    <img src={imgGal} />
+                    <img src={aniart} />
                     <p className="work_name">Artist landing page</p>
                 </div>
             </div>

@@ -32,7 +32,9 @@ hr {
 /*home*/
 #home {
   margin-bottom: 15rem;
+  position: relative;
 }
+
 #homeIcon{
   font-size: 2rem;
   cursor: pointer;
@@ -72,7 +74,7 @@ nav a:hover {
   background-color: #07071c;
 }
 .dark .nav_bg{
-  background-color: #51a8e6;
+  background-color: #ac68e4;
 }
 .dark .nav_bg a{
   color:white;
@@ -96,7 +98,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-style: normal;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 5rem;
   line-height: 80px;
   background-size: 200%;
   animation: background-pan 3s linear infinite;
@@ -121,7 +123,12 @@ h3 {
   margin-bottom: 1rem;
 }
 #hero{
-       padding-top: 12rem; 
+  padding-top: 12rem; 
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+
 }
 
 #hero h2 {
@@ -143,11 +150,12 @@ h3 {
 /*BUTTON*/
 
 #ctaBtn {
-  position: absolute;
+  
   left: 800px;
   top: 350px;
-  width: 200px;
-  height: 42px;
+  width: 12.5rem;
+  padding: 0.8rem;
+  /* height: 42px; */
   border: 10px solid;
   border-image-slice: 1;
   border-width: 3px;
@@ -193,7 +201,7 @@ h3 {
 
 #squareElem {
   position: absolute;
-  z-index: -1;
+  z-index: 10;
   width: 464.85px;
   height: 296.16px;
   left: -68.65px;
@@ -239,7 +247,7 @@ h3 {
   position: absolute;
   width: 246px;
   height: 248px;
-  left: -140px;
+  left: -280px;
   top: 280px;
   transform: rotate(43.38deg);
 }
@@ -327,14 +335,16 @@ h3 {
 }
 #projects h4 {
   font-weight: 300;
-  font-size: 46px;
+  font-size: 2.875rem;
   margin-bottom: 2rem;
 }
 #projects img {
   margin-top: 4rem;
+  width:20rem;
 }
+
 #projects hr {
-  width: 420px;
+  width: 26.25rem;
 }
 #works {
   display: flex;
@@ -382,6 +392,7 @@ h3 {
 #contact_links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #contact_links a {
@@ -516,4 +527,80 @@ h3 {
   to{
     transform: rotate(180deg);
   }
+}
+
+@media screen and (max-width: 800px) {
+ #App{
+  padding: 2rem;
+  
+ }
+  h1{
+    font-size: 3.5rem;
+  }
+  #hero{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  #ctaBtn{
+    font-size: 2rem;
+  }
+  nav{
+    display: none;
+  }
+  /*------Projects----------*/
+
+  #projects {
+    margin-bottom: 5rem;
+    padding: 3rem;
+    /* width:100%; */
+  }
+  #projects h4 {
+    font-weight: 300;
+    /* font-size: 1.438rem; */
+    margin-bottom: 2rem;
+    
+  }
+  #projects img {
+    margin-top: 2rem;
+    width:30rem;
+  }
+
+  #projects hr {
+    width: 16.25rem;
+  }
+  #works {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .work_name {
+    font-size: 1rem;
+  }
+
+  /*skills*/
+  #skills {
+    
+    padding: 1rem;
+    margin-bottom: 15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+ 
+}
+
+@media screen and (max-width: 648px){
+  #projects img {
+    margin-top: 2rem;
+    width:100%;
+    height: auto;
+  }
+ 
 }

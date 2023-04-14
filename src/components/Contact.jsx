@@ -3,7 +3,7 @@ import linked from'../assets/img/linkedin.png'
 
 function Contact(props){
     return(
-        <div>
+        <div id="infos">
             <div id="about" className={props.darkMode ? "dark" : ""}>
 
                 <h4>About me</h4>
