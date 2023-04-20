@@ -355,7 +355,14 @@ h3 {
 .work_name {
   font-size: 24px;
 }
-
+.work a{
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+.work a:hover{
+  color: #6b518d;
+}
 
 /*--About-----*/
 
