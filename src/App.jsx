@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import { useState,useEffect } from 'react'
 import Loader from './components/Loader'
 
+
 function App() {
 
   const [loaded, setLoaded ] = useState(false)
@@ -22,6 +23,7 @@ function App() {
     
     <div id="App" className={darkMode ? "dark" : ""} >
       {!loaded ? <Loader/> : <>
+     
       <Nav toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <Home  darkMode={darkMode} />
       <Skills darkMode={darkMode}/>

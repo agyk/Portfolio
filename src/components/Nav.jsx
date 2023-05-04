@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import {IoHomeOutline} from 'react-icons/io5'
+import {HiMenu} from 'react-icons/hi'
 
 function Nav(props){
 
@@ -13,14 +14,33 @@ function Nav(props){
     }
 }
 
+
 window.addEventListener("scroll", changeColor)
+
+const [isNavExpanded, setIsNavExpanded] = useState(false)
+
     return(
-        <nav className={color? "nav_bg" :"" && props.darkMode ? "dark" : ""}>
+        <>
+        <HiMenu     
+
+            onClick={() => {
+                setIsNavExpanded(!isNavExpanded)}
+                
+            }
+            id='menuIcon'></HiMenu>
+      
+        <nav className={
+            // isNavExpanded ? "expand" : "" &&
+            // color ? "nav_bg" :"" && 
+             
+            `${isNavExpanded ? "expand" : ""} ${color ? "nav_bg" :""} ${props.darkMode ? "dark" : ""}`
+            }>
                 <AnchorLink href='#home'><IoHomeOutline id='homeIcon'/></AnchorLink>
-                <AnchorLink href='#works'><a>Works</a></AnchorLink>
-                <AnchorLink href='#about'><a>About me</a></AnchorLink>
-                <AnchorLink href='#contact'><a>Contact</a></AnchorLink>
-              
+                <AnchorLink href='#works'><span>Works</span></AnchorLink>
+                <AnchorLink href='#about'><span>About me</span></AnchorLink>
+                <AnchorLink href='#contact'><span>Contact</span></AnchorLink>
+                
+                
                 <div className="toggler">
                     <p className="toggler_light">Light</p>
                     <div className="toggler_slider" onClick={props.toggleDarkMode}>
@@ -28,7 +48,9 @@ window.addEventListener("scroll", changeColor)
                     </div>
                     <p className="toggler_dark">Dark</p>
                 </div>
-            </nav>
+            </nav> 
+               
+            </>
     )
 }
 

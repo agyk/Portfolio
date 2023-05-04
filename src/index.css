@@ -42,6 +42,12 @@ hr {
 #homeIcon:hover{
   color: #0cbf6f;
 }
+#menuIcon{
+  display: none;
+  top:1rem;
+  right: 1rem;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -51,7 +57,8 @@ nav {
   z-index: 100;
   /* background-color: #07071c; */
   top: 0;
-  left:0;
+  /* left:0; */
+  margin-left: -9rem;
   padding: 1.25rem 9rem;
   width: 100%;
 }
@@ -556,6 +563,31 @@ h3 {
   nav{
     display: none;
   }
+ .expand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 4rem 2rem;
+    top:0;
+    right: 0;
+    width: 16rem;
+    gap: 1.5rem;
+    font-size: 2rem;  
+  }
+  nav a{
+    font-size: 2rem;
+  }
+  #menuIcon{
+    position: fixed;
+    z-index: 1000;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  #menuIcon:hover{
+    color: #0cbf6f;
+  }
+
   /*------Projects----------*/
 
   #projects {
