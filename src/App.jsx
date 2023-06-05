@@ -15,7 +15,7 @@ function App() {
     setDarkMode(prevDarkMode=> !prevDarkMode)
   }
   useEffect(()=>{
-    let timer = setTimeout(() => setLoaded(true), 4000)
+    let timer = setTimeout(() => setLoaded(true), 3000)
     return () => {clearTimeout(timer)}
   },[])
 
